@@ -4,24 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="icon" href="assets/favicon.ico">
-    <style>
-        /* Border styling */
-        header,  footer {
-            border: 1px solid black;
-        }
-
-        /* Custom Element #1 */
-        border-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid black;
-            padding: 20px;
-            margin: 10px 0;
-            background-color: #f5f5f5;
-        }
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
 
     <!-- Custom Element #2 -->
     <script>
@@ -43,14 +26,12 @@
 
     <header>
         <nav>
-            <div>
-                <a href="index.html">
-                    <svg width="30" height="30" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="40" fill="black" />
-                    </svg>
-                    <strong>Home</strong>
-                </a>
-            </div>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="photography.html">Photography</a></li>
@@ -63,16 +44,16 @@
 
     <main>
 
-        <border-box>
-            <div>
+        <section class = "profile-section">
+            <header>
                 <h1>Ahmad Naqib Fitri bin Feizal</h1>
                 <p>CS student &middot; Photographer &middot; Runner</p>
                 <button type="button">See work</button>
-            </div>
+            </header>
             <picture>
-                <img src="assets/dp.webp" alt="Profile Picture" width="300" height="300">
+                <img src="assets/dp.webp" alt="Profile Picture" class="profile-img" width="300" height="300">
             </picture>
-        </border-box>
+        </section>
 
         <section>
             <h2>About</h2>

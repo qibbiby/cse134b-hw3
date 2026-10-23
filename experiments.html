@@ -5,56 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiments</title>
-    <link rel="icon" href="assets/favicon.ico">
-    <style>
-        /* Border styling */
-        header, article, footer, figure, canvas, video, audio {
-            border: 1px solid black;
-        }
-
-        /* Custom Element #1 */
-        border-box {
-            display: block;
-            border: 1px solid black;
-            padding: 20px;
-            margin: 10px 0;
-            background-color: #f5f5f5;
-        }
-
-        border-box.sandbox-main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 350px;
-            background-color: #fcfcfc;
-        }
-
-        border-box.demo-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-        }
-
-        border-box.demo-grid article {
-            flex: 1;
-            padding: 10px;
-        }
-    </style>
-
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <div>
-                <a href="index.html">
-                    <svg width="30" height="30" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="40" fill="black" />
-                    </svg>
-                    <strong>Home</strong>
-                </a>
-            </div>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="photography.html">Photography</a></li>
@@ -70,7 +32,7 @@
             <h1>HTML5 Sandbox</h1>
             <p><em>Live demos, canvas sketches, and small experiments.</em></p>
 
-            <border-box class="sandbox-main">
+            <article class="card sandbox-featured">
                 <h2>Featured Demo: 2D Canvas Graphics</h2>
                 <canvas id="sandboxCanvas" width="700" height="280">
                     Your browser does not support the canvas element.
@@ -90,20 +52,20 @@
                     }
                     img.onload = animate;
                 </script>
-            </border-box>
+            </article>
 
-            <border-box class="demo-grid">
-                
-                <article>
+            <section class="experiments-grid">
+
+                <article class="card experiment-item">
                     <h3>Demo 01: Video Tag</h3>
                     <p><em>HTML5 native video player with poster fallback</em></p>
-                    <video poster="assets/trust.jpg" controls width="230" height="130">
+                    <video poster="assets/trust.jpg" controls>
                         <source src="assets/rick.mp4" type="video/mp4">
                         Your browser does not support video playback.
                     </video>
                 </article>
 
-                <article>
+                <article class="card experiment-item">
                     <h3>Demo 02: Audio Tag</h3>
                     <p><em>HTML5 native audio streaming</em></p>
                     <audio controls>
@@ -112,15 +74,15 @@
                     </audio>
                 </article>
 
-                <article>
+                <article class="card experiment-item">
                     <h3>Demo 03: MathML &amp; Template</h3>
                     <p><em>Einstein's Mass-Energy Equivalence</em></p>
-                    
+
                     <template id="demo-template">
                         <p>Hidden template content reserved for DOM clone operations.</p>
                     </template>
 
-                    <div>
+                    <p class="math-display">
                         <math xmlns="http://www.w3.org/1998/Math/MathML">
                             <mi>E</mi>
                             <mo>=</mo>
@@ -130,14 +92,13 @@
                                 <mn>2</mn>
                             </msup>
                         </math>
-                    </div>
+                    </p>
 
                     <p><small>
-                        <strong>Adoption Delay:</strong> MathML was recommended in 1998, but browser adoption stalled when Chrome removed initial support in 2013. Full cross-browser native rendering was only restored in Chromium 109 in early 2023.
+                        <strong>Adoption Delay:</strong> MathML was recommended in 1998, but browser adoption stalled when Chrome removed initial support in 2013. Full cross-browser native rendering was restored in Chromium 109 in early 2023.
                     </small></p>
                 </article>
-
-            </border-box>
+            </section>
         </section>
     </main>
 

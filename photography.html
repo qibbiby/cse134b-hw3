@@ -5,38 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography</title>
-    <link rel="icon" href="assets/favicon.ico">
-    <style>
-        /* Border styling */
-        footer, header {
-            border: 1px solid black;
-        }
-
-        /* Custom Element #1 */
-        border-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid black;
-            padding: 20px;
-            margin: 10px 0;
-            background-color: #f5f5f5;
-        }
-
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <div>
-                <a href="index.html">
-                    <svg width="30" height="30" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="40" fill="black" />
-                    </svg>
-                    <strong>Home</strong>
-                </a>
-            </div>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="photography.html">Photography</a></li>
@@ -51,77 +31,86 @@
         <section>
             <h1>Travel & Photography</h1> 
 
-            <border-box>
-                <article>
+            <article class="card photo-trip">
+                <header>
                     <h2>Dolomites Alps, Italy</h2>
-                    <border-box>
-                        <figure>
-                            <picture>
-                                <img src="assets/dolomites1.webp" alt="Tre Cime Peak" width="220" height="160">
-                            </picture>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <img src="assets/dolomites2.webp" alt="Lago di Carezza" width="220" height="160">
-                            </picture>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <img src="assets/dolomites3.webp" alt="Seceda Peak" width="220" height="160">
-                            </picture>
-                        </figure>
-                    </border-box>
-                    <p><i>September, 2026</i></p>
-                </article>
-            </border-box>
+                    <p class="trip-date"><time datetime="2026-09">September 2026</time></p>
+                </header>
+                <section class="photo-gallery">
+                    <figure>
+                        <picture>
+                            <img src="assets/dolomites1.webp" alt="Tre Cime Peak" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Tre Cime Peak</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <img src="assets/dolomites2.webp" alt="Lago di Carezza" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Lago di Carezza</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <img src="assets/dolomites3.webp" alt="Seceda Peak" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Seceda Peak</figcaption>
+                    </figure>
+                </section>
+            </article>
 
-            <border-box>
-                <article>
+            <article class="card photo-trip">
+                <header>
                     <h2>Iceland</h2> 
-                    <border-box>
-                        <figure>
-                            <picture>
-                                <img src="assets/Iceland1.webp" alt="Bruarfoss" width="220" height="160">
-                            </picture>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <img src="assets/Iceland2.webp" alt="Plane Wreck" width="220" height="160">
-                            </picture>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <img src="assets/Iceland3.webp" alt="Milky Way" width="220" height="160">
-                            </picture>
-                        </figure>
-                    </border-box>
-                    <p><i>December, 2025</i></p>
-                </article>
-            </border-box>
+                    <p class="trip-date"><time datetime="2025-12">December 2025</time></p>
+                </header>
+                <section class="photo-gallery">
+                    <figure>
+                        <picture>
+                            <img src="assets/Iceland1.webp" alt="Bruarfoss" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Bruarfoss</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <img src="assets/Iceland2.webp" alt="Plane Wreck" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Plane Wreck</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <img src="assets/Iceland3.webp" alt="Milky Way" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Milky Way</figcaption>
+                    </figure>
+                </section>
+            </article>
 
-            <border-box>
-                <article>
+            <article class="card photo-trip">
+                <header>
                     <h2>Death Valley National Park, California</h2>
-                    <border-box>
-                        <figure>
-                            <picture>
-                                <img src="assets/Death-Valley1.webp" alt="Artist's Palette" width="220" height="160">
-                            </picture>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <img src="assets/Death-Valley2.webp" alt="Devil's Golf Course" width="220" height="160">
-                            </picture>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <img src="assets/Death-Valley3.webp" alt="Milky Way and Sunrise" width="220" height="160">
-                            </picture>
-                        </figure>
-                    </border-box>
-                    <p><i>November, 2025</i></p>
-                </article>
-            </border-box>
+                    <p class="trip-date"><time datetime="2025-11">November 2025</time></p>
+                </header>
+                <section class="photo-gallery">
+                    <figure>
+                        <picture>
+                            <img src="assets/Death-Valley1.webp" alt="Artist's Palette" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Artist's Palette</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <img src="assets/Death-Valley2.webp" alt="Devil's Golf Course" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Devil's Golf Course</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <img src="assets/Death-Valley3.webp" alt="Milky Way and Sunrise" width="220" height="160" loading="lazy">
+                        </picture>
+                        <figcaption>Milky Way and Sunrise</figcaption>
+                    </figure>
+                </section>
+            </article>
         
 
         </section>

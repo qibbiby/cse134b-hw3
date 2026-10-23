@@ -5,52 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="icon" href="assets/favicon.ico">
-    <style>
-        /* Border styling */
-        footer, header {
-            border: 1px solid black;
-        }
-
-        /* Custom Element #1 */
-        border-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid black;
-            padding: 20px;
-            margin: 10px 0;
-            background-color: #f5f5f5;
-        }
-
-        border-box.project-card {
-            gap: 25px;
-            align-items: flex-start;
-        }
-
-        border-box.project-card picture,
-        border-box.project-card video {
-            flex-shrink: 0;
-        }
-
-        border-box.project-card article {
-            flex: 1;
-            min-width: 0;
-        }       
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <div>
-                <a href="index.html">
-                    <svg width="30" height="30" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="40" fill="black" />
-                    </svg>
-                    <strong>Home</strong>
-                </a>
-            </div>
+            <a href="index.html">
+                <svg class="nav-logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                <strong>Home</strong>
+            </a>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="photography.html">Photography</a></li>
@@ -65,50 +31,50 @@
         <section>
             <h1>My Projects</h1> 
 
-            <border-box class="project-card">
+            <article class="card project-card">
                 <picture>
-                    <img src="assets/pnb-hub.webp" alt="PNB Developer Knowledge Hub preview" width="500" height="300">
+                    <img src="assets/pnb-hub.webp" alt="PNB Developer Knowledge Hub preview", 
+                    class="project-media", width="500" height="300">
                 </picture>
-                <article>
+                <section class="project-content">
                     <h2>PNB Developer Knowledge Hub</h2>
-                    <p><em>Enterprise Tooling &middot; Technical Documentation System</em></p>
+                    <p class="project-subtitle"><em>Enterprise Tooling &middot; Technical Documentation System</em></p>
                     <p>
                         An internal documentation platform engineered for <b>Permodalan Nasional Berhad (PNB)</b> to solve scattered SOPs and reduce developer onboarding friction. Designed custom regex formulas for Coda to enable full-text indexing and search keyword highlighting across all code snippets, APIs, and guides. Executed a platform comparison <i>(Notion vs. Coda)</i> that slashed licensing costs by over 80% while restoring content-level searchability.
                     </p>
-                    <div>
+                    <footer class="project-status">
                         <label for="p1-progress">Development Status:</label><br>
                         <progress id="p1-progress" value="100" max="100">100%</progress>
                         <span>100% Completed</span>
-                    </div>
-                </article>
-            </border-box>
+                    </footer>
+                </section>
+            </article>
 
-            <border-box class="project-card">
-                <iframe width="500" 
+            <article class="card project-card">
+                <iframe class="project-media" 
+                    width="500" 
                     height="300" 
                     src="https://www.youtube.com/embed/GCCjZyGqj8E" 
                     title="State of Panic Gameplay Demo" 
                     allowfullscreen>
                 </iframe>
-                <!--<picture>
-                    <img src="assets/state-of-panic.webp" alt="State of Panic educational game preview" width="400" height="220">
-                </picture> -->
-                <article>
+                
+                <section class="project-content">
                     <h2>State of Panic</h2>
-                    <p><em>Educational game &middot; US geography</em></p>
+                    <p class="project-subtitle"><em>Educational game &middot; US geography</em></p>
                     <p>
                         An interactive US geography learning game built around contiguous state graph traversal to 
                         educate K-12 students on US geography. Features progressive mode unlocks 
                         (Practice, Classic, Cracked) with reward certificates, real-time combo multipliers with 
                         idle-decay penalty mechanics, and procedural mini-games testing state spelling and shortest-path state distances.
                     </p>
-                    <div>
+                    <footer class="project-status">
                         <label for="p2-progress">Development Status:</label><br>
                         <progress id="p2-progress" value="100" max="100">100%</progress>
                         <span>100% Completed</span>
-                    </div>
-                </article>
-            </border-box>
+                    </footer>
+                </section>
+            </article>
         
 
         </section>
