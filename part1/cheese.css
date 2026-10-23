@@ -1,0 +1,63 @@
+/* by Ahmad bin Feizal
+    repository : https://github.com/qibbiby/cse134b-hw3
+*/
+
+body {
+    font-family: sans-serif;
+    line-height: 1.9;
+    color: #582300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.latin {
+    font-style: italic;
+}
+
+#warning {
+    background-color: #f7c0c0;
+}
+
+blockquote {
+    border: 2px solid #000000;
+    margin: 20px;
+    padding: 25px;
+}
+
+a:hover {
+    color:#009297;
+    text-decoration: underline 2px;
+   
+}
+
+a:focus, input:focus, button:focus {
+    outline: 3px solid #00d6dd;
+    outline-offset: 1px;
+}
+
+h1 {
+    font-style: oblique;
+    /* first font-style modifier, when this line is read, h1 font-style is
+        initially set to oblique
+        */
+
+}
+
+h1 {
+    font-style: normal;
+    /* since the html reads the css top-down. This line is read after the first 
+        set to oblique. This rule will overwrite the initial font-style to normal
+        */
+
+}
